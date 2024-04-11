@@ -1,0 +1,54 @@
+﻿<Application x:Class="WpfApp1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfApp1"
+             StartupUri="View/Auth.xaml">
+    <Application.Resources>
+
+        <SolidColorBrush x:Key="additionalColor" Color="#76e383"/>
+        <SolidColorBrush x:Key="mainColor" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="pointColor" Color="#498c51"/>
+        <CornerRadius x:Key="borderRadius">4</CornerRadius>
+        
+        <Style x:Key="LabelStyle1" TargetType="Label">
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontSize" Value="14"></Setter>
+        </Style>
+        <Style  TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource pointColor}"></Setter>
+            <Setter Property="FontFamily"  Value="Comic Sans MS"></Setter>
+            <Setter Property="FontSize" Value="14"></Setter>
+            <Setter Property="Height" Value="35"></Setter>
+            <Setter Property="Width" Value="300"></Setter>
+            <Setter Property="Margin" Value="0 5 0 0"></Setter>
+        </Style>
+        <Style x:Key="CanvasLayoutstyle" TargetType="Canvas">
+            <Setter Property="Height" Value="30"></Setter>
+            <Setter Property="Background" Value="{StaticResource additionalColor}"></Setter>
+        </Style>
+        <Style  TargetType="TextBox">
+            <Setter Property="Width" Value="300"></Setter>
+            <Setter Property="Height" Value="35"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="BorderThickness" Value="1"/>
+          
+        </Style>
+        <Style x:Key="PB" TargetType="PasswordBox">
+            <Setter Property="PasswordChar" Value="●"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="Height" Value="35"></Setter>
+            <Setter Property="Width" Value="300"></Setter>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="0 0 0 5"></Setter>
+        </Style>
+        <Style x:Key="MainSP" TargetType="StackPanel">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>
