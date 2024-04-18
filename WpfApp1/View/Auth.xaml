@@ -21,7 +21,7 @@
                 <Canvas Width="300" Name="canvas" Height="60"></Canvas>
                 <TextBox Name="tbCaptcha"></TextBox>
             </StackPanel>
-            <Button Click="OnSign" >Войти</Button>
+            <Button Style="{StaticResource ButtonStyle}" Click="OnSign" >Войти</Button>
         </StackPanel>
         <Canvas Style="{StaticResource CanvasLayoutstyle}" VerticalAlignment="Bottom"></Canvas>
     </Grid>

@@ -20,9 +20,14 @@ namespace WpfApp1.View
     /// </summary>
     public partial class AdminPanel : Window
     {
+        private readonly TradeEntities entities;
+        private readonly User user;
         public AdminPanel(TradeEntities entities, User user)
         {
+            this.entities = entities;
+            this.user = user;
             InitializeComponent();
+            
         }
         private void Window_Closed(object sender, EventArgs e)
         {
@@ -32,5 +37,21 @@ namespace WpfApp1.View
             }
         }
 
+        private void ViewButton_Click(object sender, RoutedEventArgs e)
+        {
+            ProductView productView = new ProductView(entities, user);
+            productView.Owner = this;
+            productView.Show();
+            Hide();
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddProduct addproduct = new AddProduct(entities, user);
+            addproduct.Owner = this;
+            addproduct.Show();
+            addproduct.isEdit = false;
+            Hide();
+        }
     }
 }

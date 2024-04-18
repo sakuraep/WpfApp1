@@ -69,6 +69,15 @@ namespace WpfApp1.View
                     Captcha.Visibility= Visibility.Collapsed;
                     break;
                 case "Менеджер":
+                    ProductView productView = new ProductView(entities, user);
+                    productView.Owner = this;
+                    productView.Show();
+                    Hide();
+                    tblogin.Text = "";
+                    tbpassword.Password = "";
+                    tbCaptcha.Text = "";
+                    canvas.Children.Clear();
+                    Captcha.Visibility = Visibility.Collapsed;
                     break;
                 case "Клиент":
                     break;

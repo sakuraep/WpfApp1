@@ -1,0 +1,59 @@
+﻿<Window Closed="Window_Closed" x:Class="WpfApp1.View.AddProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.View"
+        mc:Ignorable="d"
+        Title="AddProduct" Height="505" Width="920">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Column="2">
+            <Label Style="{StaticResource LabelStyle1}">Цена</Label>
+            <TextBox Text="{Binding ProductCost}" Name="tbCost" ></TextBox>
+            <Label Style="{StaticResource LabelStyle1}">Действующая скидка</Label>
+            <TextBox Text="{Binding ProductDiscountAmount}" Name="tbCurrentAmount" ></TextBox>
+            <Label Style="{StaticResource LabelStyle1}">Максимально возможная скидка</Label>
+            <TextBox Text="{Binding ProductMaxDiscount}" Name="tbMaxAmount"></TextBox>
+            <Label Style="{StaticResource LabelStyle1}">Количество</Label>
+            <TextBox Text="{Binding ProductQuantityInStock}" Name="tbQuantity" ></TextBox>
+            <Label Style="{StaticResource LabelStyle1}">Единица измерения</Label>
+            <ComboBox SelectedItem="{Binding Unit1}" Name="cbUnit"  Height="35" DisplayMemberPath="Name" ItemsSource="{Binding Units}"></ComboBox>
+            <Label Style="{StaticResource LabelStyle1}">Фото</Label>
+            <Button Style="{StaticResource ButtonStyle2}" Name="AddImage" Click="AddImage_Click">Выбрать изображение</Button>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0">
+            <Label Style="{StaticResource LabelStyle1}"> Артикль</Label>
+            <TextBox Text="{Binding ProductArticleNumber}" Name="tbArticle" ></TextBox>
+            <Label Style="{StaticResource LabelStyle1}">Название товара</Label>
+            <TextBox Text="{Binding ProductName}"  Name="tbName" ></TextBox>
+            <Label Style="{StaticResource LabelStyle1}">Описание</Label>
+            <TextBox Text="{Binding ProductDescription}" Name="tbDescription"></TextBox>
+            <Label Style="{StaticResource LabelStyle1}">Категория товара</Label>
+            <ComboBox SelectedItem="{Binding ProductCategory1}" Name="cbCategory" Height="35" DisplayMemberPath="Name" ItemsSource="{Binding ProductCategories}"></ComboBox>
+            <Label Style="{StaticResource LabelStyle1}">Производитель</Label>
+            <ComboBox SelectedItem="{Binding Manafacturer}" Name="cbManufacturer" Height="35" DisplayMemberPath="Name" ItemsSource="{Binding Manafacts}"></ComboBox>
+            <Label Style="{StaticResource LabelStyle1}">Поставщик</Label>
+            <ComboBox SelectedItem="{Binding Provider}" Name="cbProvider" Height="35"  DisplayMemberPath="Name" ItemsSource="{Binding Providers}"></ComboBox>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="4">
+            <Label Style="{StaticResource LabelStyle1}">Изображение</Label>
+            <Image Source="{Binding ProductPhoto}"  Name="ImagePreview" Width="250" Height="253"></Image>
+        </StackPanel>
+        
+        <Button Style="{StaticResource ButtonStyle}" Name="Add" Click="Add_Click" Grid.ColumnSpan="5" Grid.Row="1">Добавить товар</Button>
+    </Grid>
+</Window>
