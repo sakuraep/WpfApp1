@@ -14,13 +14,21 @@
             <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
             <Setter Property="FontSize" Value="14"></Setter>
         </Style>
-        <Style  TargetType="Button">
+        <Style x:Key="ButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="{StaticResource pointColor}"></Setter>
             <Setter Property="FontFamily"  Value="Comic Sans MS"></Setter>
             <Setter Property="FontSize" Value="14"></Setter>
             <Setter Property="Height" Value="35"></Setter>
             <Setter Property="Width" Value="300"></Setter>
             <Setter Property="Margin" Value="0 5 0 0"></Setter>
+        </Style>
+        <Style x:Key="ButtonStyle2" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource additionalColor}"></Setter>
+            <Setter Property="FontFamily"  Value="Comic Sans MS"></Setter>
+            <Setter Property="FontSize" Value="14"></Setter>
+            <Setter Property="Height" Value="35"></Setter>
+            <Setter Property="Width" Value="300"></Setter>
+            
         </Style>
         <Style x:Key="CanvasLayoutstyle" TargetType="Canvas">
             <Setter Property="Height" Value="30"></Setter>
@@ -49,6 +57,9 @@
         <Style x:Key="MainSP" TargetType="StackPanel">
             <Setter Property="VerticalAlignment" Value="Center"></Setter>
             <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
         </Style>
     </Application.Resources>
 </Application>

@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="AdminPanel" Height="450" Width="800">
     <Grid>
-        <Label VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40">Панель администратора</Label>
+        <Label Style="{StaticResource LabelStyle1}" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="40">Панель администратора</Label>
+        <StackPanel VerticalAlignment="Center">
+
+            <Button Style="{StaticResource ButtonStyle}" Name="ViewButton" Click="ViewButton_Click">
+                <Label Style="{StaticResource LabelStyle1 }" HorizontalAlignment="Center">Посмотреть список товаров</Label>
+            </Button>
+            
+            <Button Style="{StaticResource ButtonStyle}" Name="AddButton" Click="AddButton_Click">
+                <Label Style="{StaticResource LabelStyle1 }" HorizontalAlignment="Center">Добавить товар</Label>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>
